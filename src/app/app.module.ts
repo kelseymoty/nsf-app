@@ -8,6 +8,7 @@ import { AgeComponent } from './age/age.component';
 import { StartPageComponent } from './startpage/startpage.component';
 import { StimuliComponent } from './stimuli/stimuli.component';
 import { ResponseService } from './response/response.service';
+import { ButtonComponent } from './button/button.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ResponseService } from './response/response.service';
     AgeComponent,
     StartPageComponent,
     StimuliComponent,
+    ButtonComponent,
    ],
   imports: [
     BrowserModule
