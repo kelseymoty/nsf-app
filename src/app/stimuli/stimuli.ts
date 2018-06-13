@@ -30,7 +30,7 @@ export class Coordinate {
 }
 
 // DEPRECATED for this study
-export class AttnCheck {
-    sound: string[];
-}
+// export class AttnCheck {
+//     sound: string[];
+// }
 

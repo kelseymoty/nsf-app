@@ -1,4 +1,4 @@
-import { Study, Condition, Trial, Picture, Coordinate, AttnCheck } from './stimuli';
+import { Study, Condition, Trial, Picture, Coordinate } from './stimuli';
 
 export const STUDIES: Study = {
     id: 1,
@@ -344,12 +344,12 @@ export const STUDIES: Study = {
 };
 
 
-export const ATTENTIONCHECK: AttnCheck = {
-    sound: ["../assets/audio/cow.mp3",
-        "../assets/audio/chick.mp3",
-        "../assets/audio/dog.mp3",
-        "../assets/audio/horse.mp3"]
-};
+// export const ATTENTIONCHECK: AttnCheck = {
+//     sound: ["../assets/audio/cow.mp3",
+//         "../assets/audio/chick.mp3",
+//         "../assets/audio/dog.mp3",
+//         "../assets/audio/horse.mp3"]
+// };
 
 
 // rename this condition because this should be the stimuli grouped by condition?? 

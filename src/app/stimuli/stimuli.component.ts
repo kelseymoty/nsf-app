@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output, ViewChild, ElementRef } from '@angular/core';
-import { STUDIES, ATTENTIONCHECK } from './default-stimuli';
-import { Study, Condition, Trial, AttnCheck, Coordinate } from './stimuli';
+import { STUDIES } from './default-stimuli';
+import { Study, Condition, Trial, Coordinate } from './stimuli';
 import { ResponseService } from '../response/response.service';
 import { Response } from '../response/response';
 
@@ -23,8 +23,6 @@ export class StimuliComponent {
   condition: Condition;
   // the current trial - this will be updated throughout the session
   trial: Trial;
-  attnCheck: AttnCheck;
-  attnSound: string = '';
 
   vid = 0;
   aud = 0;
@@ -33,15 +31,11 @@ export class StimuliComponent {
   introEnded = false;
   playAltAudio = false;
   chosenValue = null;
-  attnCheckTrial = false;
   firstTrial: Trial;
   responseService: ResponseService;
   response: Response;
-  attnAnimalSound = false;
-  attnSoundOver = false;
-  playSecondAudio = false;
   numberOfTrials = 0;
-  buttonResponse = 0; 
+  buttonResponse = 0;
 
   // for getCurrentVideo() and getCurrentAudio()
   currentVideo: string;
@@ -243,27 +237,6 @@ export class StimuliComponent {
     }
   }
 
-  getAttnAudio() {
-    if (this.attnSound != '') {
-      return this.attnSound;
-    }
-
-    this.attnSound =
-      ATTENTIONCHECK.sound[
-        Math.floor(Math.random() * ATTENTIONCHECK.sound.length)
-      ];
-    console.log(this.attnSound, 'this is the animal sound');
-    return this.attnSound;
-  }
-
-  attnAudioEnded(attnSoundDone) {
-    this.attnAnimalSound = true;
-
-    if (attnSoundDone) {
-      this.attnSoundOver = true;
-    }
-  }
-
   getCssCoordinates(coords) {
     let res = coords.split(',');
     res = res.map(val => {
@@ -293,31 +266,6 @@ export class StimuliComponent {
     console.log(this.buttonResponse, 'is the button response');
   }
 
-  nextAttnCheck(value, oneMoreAudio) {
-    console.log('nextAttn, received as value: ', value);
-
-    if (!this.response) {
-      this.response = new Response();
-      this.response.data.participant = this.participant;
-      this.response.data.response = [value + 1]; // ngfor indexes by 0
-      this.response.data.age = this.age; // todo fill in TODO
-      this.response.data.study = this.study.id;
-      this.response.data.condition = this.condition.id;
-      this.response.data.trial = this.trial.id;
-    } else {
-      this.response.data.response.push(value + 1);
-    }
-
-    this.currentImageCoordinates[value].disabled = true;
-    // TODO add rfunctionality so that for only study 2, it logs data for first audio
-    if (oneMoreAudio == true && this.study.id == 2) {
-      this.playSecondAudio = true;
-      console.log(this.playSecondAudio, 'playSecondAudio is set to this');
-    } else {
-      this.attnCheckTrial = true;
-    }
-  }
-
   trialsCompleted() {
     this.numberOfTrials++;
     this.numberOfTrialsEvent.emit(this.numberOfTrials);
@@ -339,8 +287,6 @@ export class StimuliComponent {
   nextTrial(value) {
     this.trialsCompleted();
     console.log('at beginning of next trial()');
-    this.response.data.attnTrial = this.basename(this.getAttnAudio());
-    this.response.data.attnResponse = value + 1; // ngfor indexes by 0
 
     // need to get index of the current trial within the conditions' list
     const index = this.getTrialIndexById(this.trial.id);
@@ -357,13 +303,21 @@ export class StimuliComponent {
     this.aud = 0;
     this.pic = 0;
     this.showPicture = false;
-    this.attnCheckTrial = false;
-    this.attnAnimalSound = false;
-    this.attnSoundOver = false;
-    this.playSecondAudio = false;
-    this.attnSound = '';
 
     console.log('after resetting lots of things in next trial()');
+    if (!this.response) {
+      this.response = new Response();
+      this.response.data.participant = this.participant;
+      this.response.data.response = [value + 1]; // ngfor indexes by 0
+      this.response.data.age = this.age; // todo fill in TODO
+      this.response.data.study = this.study.id;
+      this.response.data.condition = this.condition.id;
+      this.response.data.trial = this.trial.id;
+    } else {
+      this.response.data.response.push(value + 1);
+    }
+
+    // this.currentImageCoordinates[value].disabled = true;
     this.responseService.setResponse(this.response);
     this.response = null;
 
