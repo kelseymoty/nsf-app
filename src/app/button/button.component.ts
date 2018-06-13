@@ -14,8 +14,9 @@ export class ButtonComponent {
   }
 
   setValue(value) {
+    console.log("buttons are", this.buttons);
     this.response.emit(value);
-    console.log("button value recorded asF", this.response)
+    console.log("button value recorded as", this.response)
   }
 
 }

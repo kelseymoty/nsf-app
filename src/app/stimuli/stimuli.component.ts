@@ -41,6 +41,7 @@ export class StimuliComponent {
   attnSoundOver = false;
   playSecondAudio = false;
   numberOfTrials = 0;
+  buttonResponse = 0; 
 
   // for getCurrentVideo() and getCurrentAudio()
   currentVideo: string;
@@ -287,6 +288,11 @@ export class StimuliComponent {
     return null;
   }
 
+  setValue(value) {
+    this.buttonResponse = value;
+    console.log(this.buttonResponse, 'is the button response');
+  }
+
   nextAttnCheck(value, oneMoreAudio) {
     console.log('nextAttn, received as value: ', value);
 
@@ -372,3 +378,4 @@ export class StimuliComponent {
     console.log('trial =', this.trial);
   }
 }
+
