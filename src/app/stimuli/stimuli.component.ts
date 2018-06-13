@@ -16,7 +16,7 @@ export class StimuliComponent {
   // @ViewChild('thecontainer') imageContainerElement: ElementRef;
   @ViewChild('theimage') imageElement: ElementRef;
 
-  allStudies: Study[] = STUDIES;
+  allStudies: Study = STUDIES;
   // the single study to be run
   study: Study;
   // the single condition to be run
@@ -74,14 +74,13 @@ export class StimuliComponent {
     }
   }
 
-
   // set one study at random from list
   setStudy() {
     if (typeof this.study != 'undefined') {
       // guard
       return; // study already set- one per session
     }
-    this.study = this.allStudies[Math.floor(Math.random() * this.allStudies.length)];
+    this.study = this.allStudies;
     // this.study = this.allStudies[1] //GET RID OF THIS BEFORE LAUNCH
   }
 
@@ -104,6 +103,7 @@ export class StimuliComponent {
     }
 
     const result = this.nextVideo();
+    console.log(result, "result is this")
     if (!result && !alt) {
       this.showPicture = true;
     }
@@ -141,6 +141,8 @@ export class StimuliComponent {
     return true;
   }
 
+// TODO if person wants to play same video twice in row, Angular does nothing. 
+// would need to build another function to handle playing 
   getCurrentVideo() {
     console.log('before', this.currentVideo);
     console.log('showPicture', this.showPicture);

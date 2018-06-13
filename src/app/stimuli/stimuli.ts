@@ -1,3 +1,4 @@
+// TODO change Study id to string 
 export class Study {
     id: number; 
     conditions: Condition[];
@@ -15,6 +16,7 @@ export class Trial {
     movie: string[]; 
     sound: string[];
     picture: Picture;
+    button?: string[]; 
 }
 
 export class Picture {
@@ -27,6 +29,7 @@ export class Coordinate {
     disabled: boolean;
 }
 
+// DEPRECATED for this study
 export class AttnCheck {
     sound: string[];
 }
