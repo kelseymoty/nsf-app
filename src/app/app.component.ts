@@ -27,7 +27,7 @@ export class AppComponent {
 
   // todo trigger itsOver from event (to avoid hardcoding of trial count)
   trialsCompleted(number) {
-    if (number === 4) {
+    if (number === 5) {
       this.itsOver = true;
     }
   }

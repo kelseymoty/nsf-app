@@ -327,14 +327,9 @@ export class StimuliComponent {
     this.responseService.setResponse(this.response);
     this.response = null;
 
-    if (this.study.id == 3) {
-      this.playAltAudio = true;
-    }
-
     console.log('at end of next trial()');
     console.log(this.introEnded, 'what introEnded is set at ');
     console.log('showPicture =', this.showPicture);
-    console.log('playAltAudio =', this.playAltAudio);
     console.log('trial =', this.trial);
   }
 }

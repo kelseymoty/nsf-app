@@ -1,7 +1,9 @@
 import { Study, Condition, Trial, Picture, Coordinate } from './stimuli';
 
 export const STUDIES: Study = {
+    // make it so database records string for study name instead of number, so we can separate study names. 
     id: 1,
+    // conditions won't be best word to use here in future. Tasks? 
     conditions: [
         {
             id: 'first',
@@ -24,8 +26,6 @@ export const STUDIES: Study = {
                 },
                 {
                     id: "3",
-                    picture1: [""],
-                    sound1: [""],
                     movie: ["../assets/video/PiDi_2c.mp4"],
                     picture: {
                         picture: ["../assets/image/PiDi_2d_Moment.jpg"],
@@ -62,13 +62,17 @@ export const STUDIES: Study = {
                         ]
                     },
                 },
+                {
+                    id: "5",
+                    movie: ["../assets/video/PiDi_2e.mp4"],
+                },
             ]
         },
         {
-            id: 'familiar',
+            id: 'second',
             trials: [
                 {
-                    id: 'cheetah',
+                    id: 'pizza',
                     picture1: [""],
                     sound1: [""],
                     movie: ["../assets/video/chintro1.mp4"],
@@ -100,7 +104,7 @@ export const STUDIES: Study = {
                     sound: ["../assets/audio/ch_1.m4a"]
                 },
                 {
-                    id: "porcupine",
+                    id: "paint",
                     picture1: [""],
                     sound1: [""],
                     movie: ["../assets/video/pointro1.mp4"],
@@ -132,7 +136,7 @@ export const STUDIES: Study = {
                     sound: ["../assets/audio/po_1.m4a"]
                 },
                 {
-                    id: "kangaroo",
+                    id: "piano",
                     picture1: [""],
                     sound1: [""],
                     movie: ["../assets/video/kgintro1.mp4"],
@@ -164,7 +168,7 @@ export const STUDIES: Study = {
                     sound: ["../assets/audio/kg_1.m4a"]
                 },
                 {
-                    id: "skunk",
+                    id: "tree",
                     picture1: [""],
                     sound1: [""],
                     movie: ["../assets/video/skintro1.mp4"],
