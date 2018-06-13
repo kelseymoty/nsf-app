@@ -30,7 +30,8 @@
   </map>
   <div *ngFor="let c of blockedCoordinates()" [ngStyle]="{'position': 'absolute', 'z-index': '10', 'width':'80px', 'height':'80px', 'left':getCssCoordinates(c.coordinate)[2], 'top':getCssCoordinates(c.coordinate)[3]} "></div>
 
-  <audio (ended)="audioEnded()" autoplay [src]="getCurrentAudio(1)" type="audio/mp4"></audio> 
+  <!-- no audio in this experiment -->
+  <!-- <audio (ended)="audioEnded()" autoplay [src]="getCurrentAudio(1)" type="audio/mp4"></audio>  -->
 
   <app-button [buttons]="getCurrentButtons()"></app-button>
 </div>

@@ -8,77 +8,39 @@ export const STUDIES: Study = {
             trials: [
                 {
                     id: '1',
-                    picture1: [""],
-                    sound1: [""],
-                    movie: ["../assets/video/chintro1.mp4", "../assets/video/pointro1.mp4"],
+                    movie: ["../assets/video/PiDi_1.mp4", "../assets/video/PiDi_2a.mp4"],
                     picture: {
-                        picture: ["../assets/image/cheetahs.jpg"],
+                        picture: ["../assets/image/PiDi_2a_Moment.jpg"],
                         coordinate: [
                             {
                                 coordinate: "0,576,1023,767",
                                 disabled: false
                             },
-                            {
-                                coordinate: "0,441,1023,575",
-                                disabled: false
-                            },
-                            {
-                                coordinate: "0,351,1023,440",
-                                disabled: false
-                            },
-                            {
-                                coordinate: "0,156,1023,350",
-                                disabled: false
-                            },
-                            {
-                                coordinate: "0,0,1023,155",
-                                disabled: false
-                            }
                         ]
                     },
-                    sound: ["../assets/audio/ch_1.m4a"],
                     button: ["zarpie", "gorp"]
                 },
                 {
                     id: "2",
-                    picture1: [""],
-                    sound1: [""],
-                    movie: ["../assets/video/pointro1.mp4", "../assets/video/chintro1.mp4"],
+                    movie: ["../assets/video/PiDi_2b.mp4"],
                     picture: {
-                        picture: ["../assets/image/porcupines.jpg"],
+                        picture: ["../assets/image/PiDi_2a_Moment.jpg"],
                         coordinate: [
                             {
                                 coordinate: "0,578,224,767",
                                 disabled: false
                             },
-                            {
-                                coordinate: "236,490,440,640",
-                                disabled: false
-                            },
-                            {
-                                coordinate: "450,360,640,512",
-                                disabled: false
-                            },
-                            {
-                                coordinate: "650,230,830,390",
-                                disabled: false
-                            },
-                            {
-                                coordinate: "840,0,1023,270",
-                                disabled: false
-                            }
                         ]
                     },
-                    sound: ["../assets/audio/po_1.m4a"],
-                    button: ["zarpie1", "gorp1"]
+                    button: ["zarpie", "gorp"]
                 },
                 {
                     id: "3",
                     picture1: [""],
                     sound1: [""],
-                    movie: ["../assets/video/kgintro1.mp4", "../assets/video/pointro1.mp4"],
+                    movie: ["../assets/video/PiDi_2c.mp4"],
                     picture: {
-                        picture: ["../assets/image/kangaroos.jpg"],
+                        picture: ["../assets/image/PiDi_2c_Moment.jpg"],
                         coordinate: [
                             {
                                 coordinate: "0,0,211,766",
@@ -88,29 +50,16 @@ export const STUDIES: Study = {
                                 coordinate: "212,0,405,766",
                                 disabled: false
                             },
-                            {
-                                coordinate: "406,0,600,766",
-                                disabled: false
-                            },
-                            {
-                                coordinate: "601,0,795,766",
-                                disabled: false
-                            },
-                            {
-                                coordinate: "796,0,1023,766",
-                                disabled: false
-                            }
                         ]
                     },
-                    sound: ["../assets/audio/kg_1.m4a"]
                 },
                 {
                     id: "4",
                     picture1: [""],
                     sound1: [""],
-                    movie: ["../assets/video/skintro1.mp4","../assets/video/pointro1.mp4"],
+                    movie: ["../assets/video/PiDi_2d.mp4"],
                     picture: {
-                        picture: ["../assets/image/skunks.jpg"],
+                        picture: ["../assets/image/PiDi_2d_Moment.jpg"],
                         coordinate: [
                             {
                                 coordinate: "0,385,215,660",
@@ -120,21 +69,8 @@ export const STUDIES: Study = {
                                 coordinate: "216,385,410,660",
                                 disabled: false
                             },
-                            {
-                                coordinate: "411,385,605,660",
-                                disabled: false
-                            },
-                            {
-                                coordinate: "606,385,800,660",
-                                disabled: false
-                            },
-                            {
-                                coordinate: "801,385,1023,660",
-                                disabled: false
-                            }
                         ]
                     },
-                    sound: ["../assets/audio/sk_1.m4a"]
                 },
             ]
         },
