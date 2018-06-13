@@ -1,8 +1,8 @@
 <!-- Study 3 only  -->
 <!-- only play for first trial in Study 3 -->
-<div class = "videoContainer" *ngIf = "!this.introEnded && this.study.id == 3 && (this.trial.id == this.firstTrial.id)">
+<!-- <div class = "videoContainer" *ngIf = "!this.introEnded && this.study.id == 3 && (this.trial.id == this.firstTrial.id)">
   <video (ended)="videoEnded(true)" autoplay="autoplay" preload="auto" src="assets/video/3_intro.mp4" type="video/mp4"></video> 
-</div>
+</div> -->
 
 <!-- play every trial -->
 <div class = "imgContainer" *ngIf = "this.introEnded && this.playAltAudio && this.study.id == 3">
