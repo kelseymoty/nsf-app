@@ -13,7 +13,7 @@ export const STUDIES: Study = {
                         picture: ["../assets/image/PiDi_2a_Moment.jpg"],
                         coordinate: [
                             {
-                                coordinate: "0,576,1023,767",
+                                coordinate: "0,0,1023,767",
                                 disabled: false
                             },
                         ]
@@ -27,7 +27,7 @@ export const STUDIES: Study = {
                         picture: ["../assets/image/PiDi_2a_Moment.jpg"],
                         coordinate: [
                             {
-                                coordinate: "0,578,224,767",
+                                coordinate: "0,0,1023,767",
                                 disabled: false
                             },
                         ]
@@ -40,7 +40,7 @@ export const STUDIES: Study = {
                     sound1: [""],
                     movie: ["../assets/video/PiDi_2c.mp4"],
                     picture: {
-                        picture: ["../assets/image/PiDi_2c_Moment.jpg"],
+                        picture: ["../assets/image/PiDi_2d_Moment.jpg"],
                         coordinate: [
                             {
                                 coordinate: "0,0,211,766",

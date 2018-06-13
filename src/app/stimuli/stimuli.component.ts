@@ -129,8 +129,12 @@ export class StimuliComponent {
   }
 
   setTrial() {
-    const length = this.condition.trials.length;
-    this.trial = this.condition.trials[Math.floor(Math.random() * length)];
+    // set trial randomly 
+    // const length = this.condition.trials.length;
+    // this.trial = this.condition.trials[Math.floor(Math.random() * length)];
+
+    // set trial in order of list
+    this.trial = this.condition.trials[0];
   }
 
   nextVideo(): boolean {
