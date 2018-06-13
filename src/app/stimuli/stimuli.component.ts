@@ -216,6 +216,11 @@ export class StimuliComponent {
     // }
     let coords = this.trial.picture.coordinate;
 
+    if (!coords) {
+      this.currentImageCoordinates = null;
+      return null;
+    }
+
     if (coords != this.currentImageCoordinates) {
       coords = coords.map(val => {
         let res = val.coordinate.split(',');
@@ -264,6 +269,7 @@ export class StimuliComponent {
   setValue(value) {
     this.buttonResponse = value;
     console.log(this.buttonResponse, 'is the button response');
+    this.nextTrial(this.buttonResponse);
   }
 
   trialsCompleted() {

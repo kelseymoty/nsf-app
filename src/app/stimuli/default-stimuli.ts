@@ -10,13 +10,7 @@ export const STUDIES: Study = {
                     id: '1',
                     movie: ["../assets/video/PiDi_1.mp4", "../assets/video/PiDi_2a.mp4"],
                     picture: {
-                        picture: ["../assets/image/PiDi_2a_Moment.jpg"],
-                        coordinate: [
-                            {
-                                coordinate: "0,0,1023,767",
-                                disabled: false
-                            },
-                        ]
+                        picture: ["../assets/image/PiDi_2a_Moment.jpg"]
                     },
                     button: ["zarpie", "gorp"]
                 },
@@ -25,12 +19,6 @@ export const STUDIES: Study = {
                     movie: ["../assets/video/PiDi_2b.mp4"],
                     picture: {
                         picture: ["../assets/image/PiDi_2a_Moment.jpg"],
-                        coordinate: [
-                            {
-                                coordinate: "0,0,1023,767",
-                                disabled: false
-                            },
-                        ]
                     },
                     button: ["zarpie", "gorp"]
                 },
@@ -41,6 +29,7 @@ export const STUDIES: Study = {
                     movie: ["../assets/video/PiDi_2c.mp4"],
                     picture: {
                         picture: ["../assets/image/PiDi_2d_Moment.jpg"],
+                        // TODO make correct coordinates
                         coordinate: [
                             {
                                 coordinate: "0,0,211,766",
@@ -60,6 +49,7 @@ export const STUDIES: Study = {
                     movie: ["../assets/video/PiDi_2d.mp4"],
                     picture: {
                         picture: ["../assets/image/PiDi_2d_Moment.jpg"],
+                        // TODO make correct coordinates
                         coordinate: [
                             {
                                 coordinate: "0,385,215,660",
