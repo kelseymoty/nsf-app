@@ -31,6 +31,7 @@ export class StimuliComponent {
   // the current trial - this will be updated throughout the session
   trial: Trial;
   trials: Trial[]; // runlist for trials
+  curTrialIdx: number;
 
   vid = 0;
   aud = 0;
@@ -196,6 +197,7 @@ export class StimuliComponent {
 
   setTrial(idx) {
     this.trial = this.trials[idx];
+    this.curTrialIdx = idx;
   }
 
   nextVideo(): boolean {
@@ -362,16 +364,16 @@ export class StimuliComponent {
 
     const length = this.trials.length;
     // get index of the current trial in block list
-    const index = this.getTrialIndexById(this.trial.id);
+    // const index = this.getTrialIndexById(this.trial.id);
     // remove run trial from list of available
     // this.block.trials.splice(index, 1);
 
-    if (index == length - 1) {
-      // trials in block done, end function call and go to next block
+    if (this.curTrialIdx == length - 1) {
+      // we're done - call done() (not implemented yet)
       return this.nextBlock();
     }
 
-    this.setTrial(index + 1);
+    this.setTrial(this.curTrialIdx + 1);
     console.log("trial now =", this.trial);
   }
 
