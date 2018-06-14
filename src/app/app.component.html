@@ -8,9 +8,7 @@
         <app-startpage (gameStarted)="startGame($event)"></app-startpage>
     </div>
 
-    <age (year)="setAge($event)" *ngIf="this.gameStarted && !this.age"></age>
-
-    <app-stimuli *ngIf="this.age" [age]="this.age" (finishedEvent)="finished($event)"></app-stimuli>
+    <app-stimuli *ngIf="this.gameStarted" (finishedEvent)="finished($event)"></app-stimuli>
     <button class=resetButton *ngIf="this.gameStarted" (dblclick)="startOver()">reset</button>
 </div>
 
