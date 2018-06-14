@@ -22,6 +22,7 @@ export const STUDIES: Study = {
           picture: {
             picture: ["../assets/image/PiDi_2a_Moment.jpg"]
           },
+
           button: ["zarpie", "gorp"]
         },
         {
@@ -29,14 +30,13 @@ export const STUDIES: Study = {
           movie: ["../assets/video/PiDi_2c.mp4"],
           picture: {
             picture: ["../assets/image/PiDi_2d_Moment.jpg"],
-            // TODO make correct coordinates
             coordinate: [
               {
-                coordinate: "0,0,211,766",
+                coordinate: "475,270,780,850",
                 disabled: false
               },
               {
-                coordinate: "212,0,405,766",
+                coordinate: "1130,270,1400,850",
                 disabled: false
               }
             ]
@@ -47,14 +47,13 @@ export const STUDIES: Study = {
           movie: ["../assets/video/PiDi_2d.mp4"],
           picture: {
             picture: ["../assets/image/PiDi_2d_Moment.jpg"],
-            // TODO make correct coordinates
             coordinate: [
               {
-                coordinate: "0,385,215,660",
+                coordinate: "475,270,780,850",
                 disabled: false
               },
               {
-                coordinate: "216,385,410,660",
+                coordinate: "1130,270,1400,850",
                 disabled: false
               }
             ]
@@ -88,11 +87,11 @@ export const STUDIES: Study = {
             picture: ["../assets/image/PiDi_3_1c_gf_Moment.jpg"],
             coordinate: [
               {
-                coordinate: "0,0,200,200",
+                coordinate: "405,730,610,995",
                 disabled: false
               },
               {
-                coordinate: "500,500,1000,1000",
+                coordinate: "1300,730,1510,995",
                 disabled: false
               }
             ]
@@ -105,11 +104,11 @@ export const STUDIES: Study = {
             picture: ["../assets/image/PiDi_3_1d_gf_Moment.jpg"],
             coordinate: [
               {
-                coordinate: "0,0,1023,1000",
+                coordinate: "405,730,610,995",
                 disabled: false
               },
               {
-                coordinate: "212,0,405,766",
+                coordinate: "1300,730,1510,995",
                 disabled: false
               }
             ]
@@ -139,11 +138,11 @@ export const STUDIES: Study = {
             picture: ["../assets/image/PiDi_3_2c_gf_Moment.jpg"],
             coordinate: [
               {
-                coordinate: "0,0,200,200",
+                coordinate: "405,730,610,995",
                 disabled: false
               },
               {
-                coordinate: "500,500,1000,1000",
+                coordinate: "1300,730,1510,995",
                 disabled: false
               }
             ]
@@ -156,11 +155,11 @@ export const STUDIES: Study = {
             picture: ["../assets/image/PiDi_3_2d_gf_Moment.jpg"],
             coordinate: [
               {
-                coordinate: "0,0,1023,1000",
+                coordinate: "405,730,610,995",
                 disabled: false
               },
               {
-                coordinate: "212,0,405,766",
+                coordinate: "1300,730,1510,995",
                 disabled: false
               }
             ]
@@ -190,11 +189,11 @@ export const STUDIES: Study = {
             picture: ["../assets/image/PiDi_3_3c_gf_Moment.jpg"],
             coordinate: [
               {
-                coordinate: "0,0,200,200",
+                coordinate: "405,730,610,995",
                 disabled: false
               },
               {
-                coordinate: "500,500,1000,1000",
+                coordinate: "1300,730,1510,995",
                 disabled: false
               }
             ]
@@ -207,11 +206,11 @@ export const STUDIES: Study = {
             picture: ["../assets/image/PiDi_3_3d_gf_Moment.jpg"],
             coordinate: [
               {
-                coordinate: "0,0,1023,1000",
+                coordinate: "405,730,610,995",
                 disabled: false
               },
               {
-                coordinate: "212,0,405,766",
+                coordinate: "1300,730,1510,995",
                 disabled: false
               }
             ]
@@ -241,11 +240,11 @@ export const STUDIES: Study = {
             picture: ["../assets/image/PiDi_3_4c_gf_Moment.jpg"],
             coordinate: [
               {
-                coordinate: "0,0,200,200",
+                coordinate: "405,730,610,995",
                 disabled: false
               },
               {
-                coordinate: "500,500,1000,1000",
+                coordinate: "1300,730,1510,995",
                 disabled: false
               }
             ]
@@ -258,11 +257,11 @@ export const STUDIES: Study = {
             picture: ["../assets/image/PiDi_3_4d_gf_Moment.jpg"],
             coordinate: [
               {
-                coordinate: "0,0,1023,1000",
+                coordinate: "405,730,610,995",
                 disabled: false
               },
               {
-                coordinate: "212,0,405,766",
+                coordinate: "1300,730,1510,995",
                 disabled: false
               }
             ]
