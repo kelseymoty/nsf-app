@@ -22,6 +22,7 @@ export const STUDIES: Study = {
           picture: {
             picture: ["../assets/image/PiDi_2a_Moment.jpg"]
           },
+          
           button: ["zarpie", "gorp"]
         },
         {
