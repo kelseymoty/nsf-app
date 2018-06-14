@@ -141,7 +141,7 @@ export class StimuliComponent {
 
     // set trial randomly
     const length = this.block.trials.length;
-    let final: Trial[];
+    let final: Trial[] = [];
 
     if (this.block.randomize) {
       // const blockCopy = JSON.parse(JSON.stringify(this.block));
