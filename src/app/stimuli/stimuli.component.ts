@@ -159,9 +159,7 @@ export class StimuliComponent {
       }
 
       this.shuffleList(temp);
-      // TODO test this vs final.push.apply(final, temp)
-      // final = final.concat(temp);
-      final = final.push.apply(final, temp);
+      final.push.apply(final, temp);
     } else {
       final = this.block.trials;
     }
