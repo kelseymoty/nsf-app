@@ -4,5 +4,14 @@
 }
 
 button {
-    color: grey; 
+    font-family : inherit;
+    font-size: 40pt;
+    font-weight: 700;
+    width: 25%;
+    height: 120px;
+    background-color: white;
+    border: solid;
+    border-color: black; 
+    border-width: 5px; 
+    border-radius: 15px;
 }

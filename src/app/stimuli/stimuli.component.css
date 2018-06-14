@@ -2,11 +2,11 @@
     display: flex; 
     flex-direction: column;
     justify-content: center;
-    height: 90vh; 
+    height: 75vh; 
 }
 
 video {
-    width: 65%;
+    width: 80%;
     height: auto;
     display: block;
 	margin: 0 auto;
@@ -16,11 +16,11 @@ video {
     display: flex; 
     flex-direction: column;
     justify-content: center;
-    height: 90vh; 
+    height: 75vh; 
 }
 
 img {
-    width: 65%;
+    width: 80%;
     height: auto;
     display: block;
 	margin: 0 auto;

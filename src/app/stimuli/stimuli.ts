@@ -1,4 +1,3 @@
-// TODO change Study id to string
 export class Study {
   name: string;
   blocks: Block[];
