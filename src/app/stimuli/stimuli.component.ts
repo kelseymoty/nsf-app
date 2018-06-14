@@ -17,7 +17,7 @@ import { Response } from "../response/response";
   styleUrls: ["./stimuli.component.css"]
 })
 export class StimuliComponent {
-  @Output() numberOfTrialsEvent = new EventEmitter<number>();
+  @Output() finishedEvent = new EventEmitter<boolean>();
   @Input() age: number;
 
   // @ViewChild('thecontainer') imageContainerElement: ElementRef;
@@ -97,7 +97,7 @@ export class StimuliComponent {
   }
 
   done() {
-    return;
+    this.finishedEvent.emit(true);
   }
 
   videoEnded() {
@@ -337,11 +337,6 @@ export class StimuliComponent {
     this.nextTrial(this.buttonResponse);
   }
 
-  trialsCompleted() {
-    this.numberOfTrials++;
-    this.numberOfTrialsEvent.emit(this.numberOfTrials);
-  }
-
   // derived from https://stackoverflow.com/questions/3820381/need-a-basename-function-in-javascript/3820412#3820412
   // (stackoverflow code licensed as MIT)
   basename(str) {
@@ -355,7 +350,6 @@ export class StimuliComponent {
   // stores value sent to it by image (click)
   // removes finished trial from list, for next selection
   nextTrial(value?) {
-    this.trialsCompleted();
     this.vid = 0;
     this.aud = 0;
     this.pic = 0;

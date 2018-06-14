@@ -1,10 +1,10 @@
-import { ViewChild, Component, Input } from '@angular/core';
-import { StimuliComponent } from './stimuli/stimuli.component';
+import { ViewChild, Component, Input } from "@angular/core";
+import { StimuliComponent } from "./stimuli/stimuli.component";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
   @ViewChild(StimuliComponent) currentStimuliComponent: StimuliComponent;
@@ -22,14 +22,12 @@ export class AppComponent {
 
   setAge(value) {
     this.age = value;
-    console.log(this.age, 'is the age of the kid');
+    console.log(this.age, "is the age of the kid");
   }
 
   // todo trigger itsOver from event (to avoid hardcoding of trial count)
-  trialsCompleted(number) {
-    if (number === 10) {
-      this.itsOver = true;
-    }
+  finished(isDone) {
+    this.itsOver = isDone;
   }
 
   // onReset() {
