@@ -91,7 +91,7 @@ export const STUDIES: Study = {
                 disabled: false
               },
               {
-                coordinate: "1300,730,1510,995",
+                coordinate: "0,730,1510,995",
                 disabled: false
               }
             ]
@@ -108,7 +108,7 @@ export const STUDIES: Study = {
                 disabled: false
               },
               {
-                coordinate: "1300,730,1510,995",
+                coordinate: "0,730,1510,995",
                 disabled: false
               }
             ]
@@ -142,7 +142,7 @@ export const STUDIES: Study = {
                         disabled: false
                       },
                       {
-                        coordinate: "1300,730,1510,995",
+                        coordinate: "0,730,1510,995",
                         disabled: false
                       }
                 ]
@@ -159,7 +159,7 @@ export const STUDIES: Study = {
                         disabled: false
                       },
                       {
-                        coordinate: "1300,730,1510,995",
+                        coordinate: "0,730,1510,995",
                         disabled: false
                       }
               ]
@@ -193,7 +193,7 @@ export const STUDIES: Study = {
                     disabled: false
                   },
                   {
-                    coordinate: "1300,730,1510,995",
+                    coordinate: "0,730,1510,995",
                     disabled: false
                   }
               ]
@@ -210,7 +210,7 @@ export const STUDIES: Study = {
                     disabled: false
                   },
                   {
-                    coordinate: "1300,730,1510,995",
+                    coordinate: "0,730,1510,995",
                     disabled: false
                   }
               ]
@@ -244,7 +244,7 @@ export const STUDIES: Study = {
                     disabled: false
                   },
                   {
-                    coordinate: "1300,730,1510,995",
+                    coordinate: "0,730,1510,995",
                     disabled: false
                   }
               ]
@@ -261,7 +261,7 @@ export const STUDIES: Study = {
                     disabled: false
                   },
                   {
-                    coordinate: "1300,730,1510,995",
+                    coordinate: "0,730,1510,995",
                     disabled: false
                   }
               ]
