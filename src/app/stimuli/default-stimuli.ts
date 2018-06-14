@@ -69,135 +69,45 @@ export const STUDIES: Study = {
             ]
         },
         {
-            id: 'second',
+            id: 'specific1',
             trials: [
                 {
-                    id: 'pizza',
-                    picture1: [""],
-                    sound1: [""],
-                    movie: ["../assets/video/chintro1.mp4"],
-                    picture: {
-                        picture: ["../assets/image/cheetahs.jpg"],
-                        coordinate: [
-                            {
-                                coordinate: "0,576,1023,767",
-                                disabled: false
-                            },
-                            {
-                                coordinate: "0,441,1023,575",
-                                disabled: false
-                            },
-                            {
-                                coordinate: "0,351,1023,440",
-                                disabled: false
-                            },
-                            {
-                                coordinate: "0,156,1023,350",
-                                disabled: false
-                            },
-                            {
-                                coordinate: "0,0,1023,155",
-                                disabled: false
-                            }
-                        ]
-                    },
-                    sound: ["../assets/audio/ch_1.m4a"]
+                    id: 'pizza1',
+                    movie: ["../assets/video/PiDi_3_1a_sg.mp4","../assets/video/PiDi_3_1b.mp4"],
                 },
                 {
-                    id: "paint",
-                    picture1: [""],
-                    sound1: [""],
-                    movie: ["../assets/video/pointro1.mp4"],
+                    id: "pizza2",
+                    movie: ["../assets/video/PiDi_3_1c.mp4"],
                     picture: {
-                        picture: ["../assets/image/porcupines.jpg"],
+                        picture: ["../assets/image/PiDi_3_1c_gf_Moment.jpg"],
                         coordinate: [
                             {
-                                coordinate: "0,578,224,767",
+                                coordinate: "0,0,200,200",
                                 disabled: false
                             },
                             {
-                                coordinate: "236,490,440,640",
+                                coordinate: "500,500,1000,1000",
                                 disabled: false
                             },
-                            {
-                                coordinate: "450,360,640,512",
-                                disabled: false
-                            },
-                            {
-                                coordinate: "650,230,830,390",
-                                disabled: false
-                            },
-                            {
-                                coordinate: "840,0,1023,270",
-                                disabled: false
-                            }
                         ]
                     },
-                    sound: ["../assets/audio/po_1.m4a"]
                 },
                 {
-                    id: "piano",
-                    picture1: [""],
-                    sound1: [""],
-                    movie: ["../assets/video/kgintro1.mp4"],
+                    id: "pizza3",
+                    movie: ["../assets/video/PiDi_3_1d.mp4"],
                     picture: {
-                        picture: ["../assets/image/kangaroos.jpg"],
+                        picture: ["../assets/image/PiDi_3_1d_gf_Moment.jpg"],
                         coordinate: [
                             {
-                                coordinate: "0,0,211,766",
+                                coordinate: "0,0,1023,1000",
                                 disabled: false
                             },
                             {
                                 coordinate: "212,0,405,766",
                                 disabled: false
                             },
-                            {
-                                coordinate: "406,0,600,766",
-                                disabled: false
-                            },
-                            {
-                                coordinate: "601,0,795,766",
-                                disabled: false
-                            },
-                            {
-                                coordinate: "796,0,1023,766",
-                                disabled: false
-                            }
                         ]
                     },
-                    sound: ["../assets/audio/kg_1.m4a"]
-                },
-                {
-                    id: "tree",
-                    picture1: [""],
-                    sound1: [""],
-                    movie: ["../assets/video/skintro1.mp4"],
-                    picture: {
-                        picture: ["../assets/image/skunks.jpg"],
-                        coordinate: [
-                            {
-                                coordinate: "0,385,215,660",
-                                disabled: false
-                            },
-                            {
-                                coordinate: "216,385,410,660",
-                                disabled: false
-                            },
-                            {
-                                coordinate: "411,385,605,660",
-                                disabled: false
-                            },
-                            {
-                                coordinate: "606,385,800,660",
-                                disabled: false
-                            },
-                            {
-                                coordinate: "801,385,1023,660",
-                                disabled: false
-                            }
-                        ]
-                    },
-                    sound: ["../assets/audio/sk_1.m4a"]
                 },
             ]
         },

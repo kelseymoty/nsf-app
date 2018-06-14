@@ -6,7 +6,7 @@
 
 <!-- Then show image and buttons (or coordinates) -->
 <div class="secondContainer" *ngIf = "this.introEnded && this.showPicture && !this.playAltAudio && !playSecondAudio">
-  <div class="imgContainer">
+  <div class="imgContainer" *ngIf = "this.trial.picture">
     <!-- populating image -->
     <img [src]="getCurrentImage()" usemap="#testmap" #theimage />
 

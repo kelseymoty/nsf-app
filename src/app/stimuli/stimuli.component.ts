@@ -33,7 +33,6 @@ export class StimuliComponent {
   chosenValue = null;
   firstTrial: Trial;
   responseService: ResponseService;
-  response: Response;
   numberOfTrials = 0;
   buttonResponse = 0;
 
@@ -84,25 +83,25 @@ export class StimuliComponent {
     if (typeof this.condition != 'undefined') {
       return; // condition already set- one per session
     }
-    const condition = this.study.conditions[0]; // this.study.conditions[Math.floor(Math.random() * this.study.conditions.length)];
+    const condition = this.study.conditions[1]; // this.study.conditions[Math.floor(Math.random() * this.study.conditions.length)];
     const conditionCopy = JSON.parse(JSON.stringify(condition));
     this.condition = conditionCopy;
   }
 
-  videoEnded(alt) {
-    if (alt) {
-      this.introEnded = true;
-      console.log(
-        this.introEnded,
-        'if the video ended properly after alt intro'
-      );
-    }
-
-    const result = this.nextVideo();
-    console.log(result, "result is this")
-    if (!result && !alt) {
+  videoEnded() {
+  
+    
+    const nextVideo = this.nextVideo();
+    console.log(nextVideo, "result is this")
+    
+    if (!nextVideo && (typeof this.trial.picture === 'undefined')) {
+      console.log("moving to next trial when no pictures");
+      this.nextTrial(); 
+    } else if (!nextVideo) {
       this.showPicture = true;
     }
+
+    console.log(nextVideo, this.trial.picture, "this is the stuff in videoEnded")
   }
 
   // return location of current trial in conditions' list of trials
@@ -134,9 +133,11 @@ export class StimuliComponent {
 
   nextVideo(): boolean {
     if (this.vid == this.trial.movie.length - 1) {
+      console.log("no more videos", this.trial.movie);
       return false;
     }
 
+    console.log("return another video");
     this.vid++;
     return true;
   }
@@ -290,7 +291,7 @@ export class StimuliComponent {
   // todo split into two functions - juggling too much
   // stores value sent to it by image (click)
   // removes finished trial from list, for next selection
-  nextTrial(value) {
+  nextTrial(value?) {
     this.trialsCompleted();
     console.log('at beginning of next trial()');
 
@@ -310,27 +311,30 @@ export class StimuliComponent {
     this.pic = 0;
     this.showPicture = false;
 
-    console.log('after resetting lots of things in next trial()');
-    if (!this.response) {
-      this.response = new Response();
-      this.response.data.participant = this.participant;
-      this.response.data.response = [value + 1]; // ngfor indexes by 0
-      this.response.data.age = this.age; // todo fill in TODO
-      this.response.data.study = this.study.id;
-      this.response.data.condition = this.condition.id;
-      this.response.data.trial = this.trial.id;
-    } else {
-      this.response.data.response.push(value + 1);
-    }
 
-    // this.currentImageCoordinates[value].disabled = true;
-    this.responseService.setResponse(this.response);
-    this.response = null;
+    if (value) {
+      this.sendResponse(value);
+    }
+    console.log('after resetting lots of things in next trial()');
 
     console.log('at end of next trial()');
     console.log(this.introEnded, 'what introEnded is set at ');
     console.log('showPicture =', this.showPicture);
     console.log('trial =', this.trial);
+  }
+
+  sendResponse(value) {
+    let response = new Response();
+    response.data.participant = this.participant;
+    response.data.age = this.age; // todo fill in TODO
+    response.data.study = this.study.id;
+    response.data.condition = this.condition.id;
+    response.data.trial = this.trial.id;
+    response.data.response.push(value + 1);
+
+
+    // this.currentImageCoordinates[value].disabled = true;
+    this.responseService.setResponse(response);
   }
 }
 
