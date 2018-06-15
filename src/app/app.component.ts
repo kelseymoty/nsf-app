@@ -1,4 +1,4 @@
-import { ViewChild, Component, Input } from "@angular/core";
+import { ViewChild, Component, Input, OnInit } from "@angular/core";
 import { StimuliComponent } from "./stimuli/stimuli.component";
 
 @Component({
@@ -12,6 +12,7 @@ export class AppComponent {
 
   gameStarted = false;
   age = 0;
+  id: string;
 
   itsOver = false;
   // this.currentStimuliComponent.itsOver;
@@ -23,6 +24,12 @@ export class AppComponent {
   setAge(value) {
     this.age = value;
     console.log(this.age, "is the age of the kid");
+  }
+
+  setID(value: string) {
+    this.id = value;
+    this.gameStarted = true;
+    console.log(this.id, "is the id for the participant");
   }
 
   // todo trigger itsOver from event (to avoid hardcoding of trial count)

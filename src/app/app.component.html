@@ -5,7 +5,8 @@
 
 <div *ngIf="!this.itsOver">
     <div *ngIf="!gameStarted">
-        <app-startpage (gameStarted)="startGame($event)"></app-startpage>
+        <!-- <app-startpage (gameStarted)="startGame($event)"></app-startpage> -->
+        <app-id-form (idEmit)="setID($event)"></app-id-form>
     </div>
 
     <app-stimuli *ngIf="this.gameStarted" (finishedEvent)="finished($event)"></app-stimuli>

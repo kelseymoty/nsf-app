@@ -1,0 +1,35 @@
+.formPage {
+    display: flex; 
+    flex-flow: column;
+    align-items: center;
+    height: 95vh;
+}
+
+.formHeader {
+    text-align: center;
+    margin: 25% 0 15pt 0;
+}
+
+.formSection {
+    display: flex; 
+    flex-flow: column;
+    align-items: center; 
+}
+
+.formField {
+    width: 300px;
+    margin: 0 auto;
+}
+
+input {
+    width: 250px; 
+}
+
+.formButton {
+    font-size: 16pt; 
+    border: solid;
+    margin: 50% auto; 
+    width: 120pt; 
+    height: 50pt;
+    padding: 0px;
+}

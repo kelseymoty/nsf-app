@@ -1,0 +1,14 @@
+<div class="formPage">
+  <h2 class="formHeader">Please enter a participant ID</h2>
+
+  <form [formGroup]="idForm" (ngSubmit)="idForm.valid && onSubmit(idForm.value)" class="formSection" [class.error]="!idForm.valid && idForm.touched">
+
+    <div class="formField" [class.error]="!id.valid && id.touched">
+      <label for="idInput">ID: </label>
+      <input type="text" id="idInput" [formControl]="id">
+      <div *ngIf="id.hasError('required') && id.touched" class="ui error message">An ID is required</div>
+    </div>
+
+    <button type="submit" class="formButton">Start game!</button>
+  </form>
+</div>
