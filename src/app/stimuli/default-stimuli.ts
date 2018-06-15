@@ -277,14 +277,17 @@ export const STUDIES: Study = {
           movie: ["../assets/video/PiDi_4.mp4"],
           picture: {
             picture: ["../assets/image/PiDi_4_Moment.jpg"],
-            // TODO make correct coordinates
             coordinate: [
               {
-                coordinate: "0,0,211,766",
+                coordinate: "400,480,730,650",
                 disabled: false
               },
               {
-                coordinate: "212,0,405,766",
+                coordinate: "810,480,1140,650",
+                disabled: false
+              },
+              {
+                coordinate: "1220,480,1550,650",
                 disabled: false
               }
             ]
@@ -295,14 +298,17 @@ export const STUDIES: Study = {
           movie: ["../assets/video/PiDi_5a.mp4"],
           picture: {
             picture: ["../assets/image/PiDi_5a_Moment.jpg"],
-            // TODO make correct coordinates
             coordinate: [
               {
-                coordinate: "0,0,211,766",
+                coordinate: "440,450,690,720",
                 disabled: false
               },
               {
-                coordinate: "212,0,405,766",
+                coordinate: "830,450,1080,720",
+                disabled: false
+              },
+              {
+                coordinate: "1240,450,1480,720",
                 disabled: false
               }
             ]
@@ -313,14 +319,17 @@ export const STUDIES: Study = {
           movie: ["../assets/video/PiDi_5b.mp4"],
           picture: {
             picture: ["../assets/image/PiDi_5b_Moment.jpg"],
-            // TODO make correct coordinates
             coordinate: [
               {
-                coordinate: "0,0,211,766",
+                coordinate: "480,475,670,700",
                 disabled: false
               },
               {
-                coordinate: "212,0,405,766",
+                coordinate: "880,475,1030,700",
+                disabled: false
+              },
+              {
+                coordinate: "1200,475,1480,700",
                 disabled: false
               }
             ]
@@ -340,6 +349,10 @@ export const STUDIES: Study = {
               {
                 coordinate: "216,385,410,660",
                 disabled: false
+              },
+              {
+                coordinate: "216,385,410,660",
+                disabled: false
               }
             ]
           }
@@ -353,6 +366,10 @@ export const STUDIES: Study = {
             coordinate: [
               {
                 coordinate: "0,385,215,660",
+                disabled: false
+              },
+              {
+                coordinate: "216,385,410,660",
                 disabled: false
               },
               {

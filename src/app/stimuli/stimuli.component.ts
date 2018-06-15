@@ -294,7 +294,7 @@ export class StimuliComponent {
       coords = coords.map(val => {
         let res = val.coordinate.split(",");
         res = res.map(v => {
-          return String(Math.floor(Number(v) * 0.86)); // .95 if on surface book
+          return String(Math.floor(Number(v) * 0.95)); // .86 if on surface pro
         });
 
         return {
